@@ -1,3 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+
+string hello = "Hello";
+
+Console.WriteLine(hello + " World!");
+Console.WriteLine("Salut " + hello + "!");
 
