@@ -3,9 +3,19 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net7.0</TargetFramework>
-    <!-- <RootNamespace>_00._init</RootNamespace> -->
+    <RootNamespace>init</RootNamespace>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Age.cs"/>
+  </ItemGroup>
+
+<!-- 
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <Compile Include="Program.cs"/>
+    allow to run only the file specifyied
+-->
 
 </Project>
