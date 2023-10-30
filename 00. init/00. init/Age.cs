@@ -5,6 +5,16 @@ namespace Age
 {
     class Program
     {
+        static void Main(string[] args)
+        {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            string name = AskName();
+            int age = AskAge();
+
+            Console.WriteLine("Hello, " + name + " you are " + age + " year's old.");
+        }
+
         static int AskAge()
         {
             int age = 0;
@@ -13,8 +23,8 @@ namespace Age
                 Console.Write("How old are you ? ");
                 try
                 {
-                    string ag_str = Console.ReadLine();
-                    age = int.Parse(ag_str);
+                    string age_str = Console.ReadLine();
+                    age = int.Parse(age_str);
 
                     if (age <= 0)
                     {
@@ -29,10 +39,8 @@ namespace Age
             return age;
         }
 
-        static void Main(string[] args)
+        static string AskName()
         {
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
-
             string name = "";
 
             while (name.Trim() == "")
@@ -40,16 +48,13 @@ namespace Age
                 // ask name in prompt
                 Console.Write("what's your name ? ");
                 name = Console.ReadLine().Trim();
-                name = name.Trim();
 
-                if (name.Trim() == "")
+                if (name == "")
                 {
                     System.Console.WriteLine("Your name cannot be empty!");
                 }
             }
-            int age = AskAge();
-
-            Console.WriteLine("Hello, " + name + " you are " + age + " year's old.");
+            return name;
         }
     }
 }
