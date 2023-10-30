@@ -9,18 +9,30 @@ namespace Age
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-            string name = AskName();
-            int age = AskAge();
+            // Ask for name(s)
+            string nameFirst = AskName(1);
+            string nameSecond = AskName(2);
 
-            Console.WriteLine("Hello, " + name + " you are " + age + " year's old.");
+            // Ask for age(s)
+            int ageFirst = AskAge(nameFirst);
+            int ageSecond = AskAge(nameSecond);
+
+
+            Console.WriteLine("Hello, " + nameFirst + " you are " + ageFirst + " year's old.");
+            Console.WriteLine("You'll be soon " + (ageFirst + 1) + " !");
+
+            Console.WriteLine();
+
+            Console.WriteLine("Hello, " + nameSecond + " you are " + ageSecond + " year's old.");
+            Console.WriteLine("You'll be soon " + (ageSecond + 1) + " !");
         }
 
-        static int AskAge()
+        static int AskAge(string name)
         {
             int age = 0;
             while (age <= 0)
             {
-                Console.Write("How old are you ? ");
+                Console.Write(name + ", How old are you ? ");
                 try
                 {
                     string age_str = Console.ReadLine();
@@ -39,7 +51,7 @@ namespace Age
             return age;
         }
 
-        static string AskName()
+        static string AskName(int number)
         {
             string name = "";
 
