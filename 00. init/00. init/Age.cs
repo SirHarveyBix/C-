@@ -18,13 +18,30 @@ namespace Age
             int ageSecond = AskAge(nameSecond);
 
 
-            Console.WriteLine("Hello, " + nameFirst + " you are " + ageFirst + " year's old.");
-            Console.WriteLine("You'll be soon " + (ageFirst + 1) + " !");
+            OutputData(nameFirst, ageFirst);
+            OutputData(nameSecond, ageSecond);
+        }
 
+        static void OutputData(string name, int age)
+        {
             Console.WriteLine();
+            Console.WriteLine("Hello, " + name + " you are " + age + " year's old.");
+            Console.WriteLine("You'll be soon " + (age + 1) + " !");
 
-            Console.WriteLine("Hello, " + nameSecond + " you are " + ageSecond + " year's old.");
-            Console.WriteLine("You'll be soon " + (ageSecond + 1) + " !");
+            bool isGrownUpEnough = age > 18;
+            if(isGrownUpEnough)
+            {
+                Console.WriteLine("Big boy, you can drink alcool");
+            }
+            else if(age == 18)
+            {
+                Console.WriteLine("Close enough");
+            }
+            else
+            {
+                Console.WriteLine("Oh boy, go back to your mom, don't get into trouble");
+            }
+            Console.WriteLine();
         }
 
         static int AskAge(string name)
