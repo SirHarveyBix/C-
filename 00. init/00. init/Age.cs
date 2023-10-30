@@ -7,15 +7,22 @@ Console.OutputEncoding = System.Text.Encoding.UTF8;
 Console.Write("what's your name ? ");
 string name = Console.ReadLine();
 
+bool isValidAge = false;
+
+while (!isValidAge)
+{
 Console.Write("How old are you ? ");
 // ask age in prompte throw error if string
-try
-{ 
-    int age = Int32.Parse(Console.ReadLine());
+int age = 0;
 
-    Console.WriteLine("Hello, " + name + " you are " + age + " year's old.");
-}
-catch (FormatException)
-{
-    Console.Write("your age is not a valid number..");
+    try
+    {
+        age = int.Parse(Console.ReadLine());
+        isValidAge = true;
+        Console.WriteLine("Hello, " + name + " you are " + age + " year's old.");
+    }
+    catch (FormatException)
+    {
+        Console.WriteLine("your age is not a valid number..");
+    }
 }
