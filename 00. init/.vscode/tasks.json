@@ -4,36 +4,36 @@
     {
       "label": "build",
       "command": "dotnet",
-      "type": "process",
+      "type": "shell",
       "args": [
         "build",
-        "${workspaceFolder}/00. init/00. init.sln",
+        "${workspaceFolder}/00. init.sln",
         "/property:GenerateFullPaths=true",
-        "/consoleloggerparameters:NoSummary;ForceNoAlign"
+        "/consoleloggerparameters:NoSummary;"
       ],
       "problemMatcher": "$msCompile"
     },
     {
-      "label": "publish",
+      "label": "run",
       "command": "dotnet",
-      "type": "process",
+      "type": "shell",
       "args": [
-        "publish",
-        "${workspaceFolder}/00. init/00. init.sln",
+        "run",
+        "${workspaceFolder}/00. init.sln",
         "/property:GenerateFullPaths=true",
-        "/consoleloggerparameters:NoSummary;ForceNoAlign"
+        "/consoleloggerparameters:NoSummary;"
       ],
       "problemMatcher": "$msCompile"
     },
     {
       "label": "watch",
       "command": "dotnet",
-      "type": "process",
+      "type": "shell",
       "args": [
         "watch",
         "run",
         "--project",
-        "${workspaceFolder}/00. init/00. init.sln"
+        "${workspaceFolder}/00. init.sln"
       ],
       "problemMatcher": "$msCompile"
     }

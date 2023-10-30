@@ -10,11 +10,11 @@
       "request": "launch",
       "preLaunchTask": "build",
       // Si vous avez modifié la version cible de .Net Framework, veillez à mettre à jour le chemin d’accès du programme.
-      "program": "${workspaceFolder}/00. init/00. init/bin/Debug/net7.0/00. init.dll",
+      "program": "${workspaceFolder}/00. init/bin/Debug/net7.0/00. init.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/00. init/00. init",
+      "cwd": "${workspaceFolder}/00. init",
       // Pour plus d’informations sur le champ « console », consultez https://aka.ms/VSCode-CS-LaunchJson-Console
-      "console": "internalConsole",
+      "console": "integratedTerminal",
       "stopAtEntry": false
     },
     {
