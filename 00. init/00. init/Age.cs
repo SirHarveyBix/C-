@@ -8,18 +8,26 @@ namespace Age
         static void Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
+            //// Ask for name(s)
+            //string nameFirst = AskName(1);
+            //string nameSecond = AskName(2);
 
-            // Ask for name(s)
-            string nameFirst = AskName(1);
-            string nameSecond = AskName(2);
-
-            // Ask for age(s)
-            int ageFirst = AskAge(nameFirst);
-            int ageSecond = AskAge(nameSecond);
+            //// Ask for age(s)
+            //int ageFirst = AskAge(nameFirst);
+            //int ageSecond = AskAge(nameSecond);
 
 
-            OutputData(nameFirst, ageFirst);
-            OutputData(nameSecond, ageSecond);
+            //OutputData(nameFirst, ageFirst);
+            //OutputData(nameSecond, ageSecond);
+            const int ASKING_TIME = 3;
+
+            for (int i = 1; i <= ASKING_TIME; i++)
+            {
+                string nom = AskName(i);
+                int age = AskAge(nom);
+                OutputData(nom, age);
+                Console.WriteLine("\n" + new String('-', 5));
+            }
         }
 
         static void OutputData(string name, int age)
@@ -29,11 +37,11 @@ namespace Age
             Console.WriteLine("You'll be soon " + (age + 1) + " !");
 
             bool isGrownUpEnough = age > 18;
-            if(isGrownUpEnough)
+            if (isGrownUpEnough)
             {
                 Console.WriteLine("Big boy, you can drink alcool");
             }
-            else if(age == 18)
+            else if (age == 18)
             {
                 Console.WriteLine("Close enough");
             }
