@@ -30,11 +30,11 @@ namespace Age
             }
         }
 
-        static void OutputData(string name, int age)
+        static void OutputData(string name, int age, float size = 0) // parametre facultatif 
         {
             Console.WriteLine();
-            Console.WriteLine("Hello, " + name + " you are " + age + " year's old.");
-            Console.WriteLine("You'll be soon " + (age + 1) + " !");
+            Console.WriteLine($"Hello, {name} you are {age} year's old.");
+            Console.WriteLine($"You'll be soon {(age + 1)} !");
 
             bool isGrownUpEnough = age > 18;
             if (isGrownUpEnough)
@@ -43,11 +43,16 @@ namespace Age
             }
             else if (age == 18)
             {
-                Console.WriteLine("Close enough");
+                Console.WriteLine("Close enough!");
             }
             else
             {
-                Console.WriteLine("Oh boy, go back to your mom, don't get into trouble");
+                Console.WriteLine("Oh boy, go back to your mom, don't get into trouble!");
+            }
+
+            if (size > 0)
+            {
+                Console.WriteLine($"You are {size}m tall!");
             }
             Console.WriteLine();
         }
@@ -57,7 +62,7 @@ namespace Age
             int age = 0;
             while (age <= 0)
             {
-                Console.Write(name + ", How old are you ? ");
+                Console.Write($"{name}, How old are you ? ");
                 try
                 {
                     string age_str = Console.ReadLine();
