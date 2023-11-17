@@ -11,20 +11,20 @@ installer .net ([dotnet](https://dotnet.microsoft.com/en-us/download))
 pour lancer le program nouvellement developé :
 
 ```shell
-csc "00. init/00. init/Program.cs"
-mono "00. init/00. init/Program.exe"
+csc "00. init/Program.cs"
+mono "00. init/Program.exe"
 ```
 
 ## OR
 
 ```shell
-cd 00. init/00. init
+cd 00. init
 dotnet run 
 ```
 
 *fonctionne aussi sous mac si tout est bien configuré*
 
-verifier dans [*.csproj](00.%20init/00.%20init/00.%20init.csproj)
+verifier dans [*.csproj](00.%20init/init.csproj)
 
 que la ligne `Include` correspond bien au fichier que vous voulez executer:
 
