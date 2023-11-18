@@ -10,6 +10,8 @@ class Program
         int anotherNum = 23;
         int sum = num + anotherNum;
 
+        Console.WriteLine("# # # NUMBERS # # #\n");
+
         Console.WriteLine("num : " + num + " + anotherNum : " + anotherNum + " is " + sum);
 
         // multiple variables at once !
@@ -31,6 +33,17 @@ class Program
         // int doubleIntDividedInt = double1 / num; // it breaks = type double to int without casting
 
         Console.WriteLine("\ndouble1 / num is " + doubleIntDivided);
+
+        Console.WriteLine("\n# # # STRING # # #\n");
+
+
+        string myName = "Guillaume";
+        string message = "My name is " + myName;
+
+        string capsMessage = message.ToUpper();
+
+        Console.WriteLine("message is " + message);
+        Console.WriteLine("\nToUpper() " + capsMessage);
 
         Console.Read();
     }
