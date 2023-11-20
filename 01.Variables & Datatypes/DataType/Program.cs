@@ -36,7 +36,6 @@ class Program
 
         Console.WriteLine("\n# # # STRING # # #\n");
 
-
         string myName = "Guillaume";
         string message = "My name is " + myName;
 
