@@ -25,5 +25,11 @@ class Program
         Console.WriteLine(@"hello my name is {name},\nI am {age} years old.");
         // used for path fo exemple :
         Console.WriteLine(@"C:\User\Admin\Dog");
+
+        /* - - Special Characters - - */
+
+        string newString = "this is a \"string\" with \na backslash \\ and a colon :";
+
+        Console.WriteLine("\n" + newString);
     }
 }
