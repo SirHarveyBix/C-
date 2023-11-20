@@ -42,6 +42,5 @@ class Program
         // Int32.TryParse() returns a boolean
 
         Console.WriteLine("\nbetterResult : " + betterResult);
-
     }
 }
