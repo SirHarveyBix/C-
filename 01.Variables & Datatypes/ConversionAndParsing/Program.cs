@@ -41,6 +41,8 @@ class Program
         int betterResult = Int32.Parse(myNewString) + Int32.Parse(mySecondNewString);
         // Int32.TryParse() returns a boolean
 
-        Console.WriteLine("\nbetterResult : " + betterResult);
+        float stringForFloat = float.Parse("0.85");
+
+        Console.WriteLine("\nbetterResult : " + betterResult + "\nInt32.Parse(\"0.85\") : " + stringForFloat);
     }
 }
