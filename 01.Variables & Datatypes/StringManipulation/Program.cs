@@ -1,5 +1,6 @@
-﻿namespace StringManipulation;
+﻿using System;
 
+namespace StringManipulation;
 class Program
 {
     static void Main(string[] args)

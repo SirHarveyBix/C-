@@ -1,4 +1,6 @@
-﻿namespace OldStyleApp
+﻿using System;
+
+namespace OldStyleApp
 {
     internal class Program
     {

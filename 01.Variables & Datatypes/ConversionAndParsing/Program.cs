@@ -1,5 +1,6 @@
-﻿namespace ConversionAndParsing;
+﻿using System;
 
+namespace ConversionAndParsing;
 class Program
 {
     static void Main(string[] args)

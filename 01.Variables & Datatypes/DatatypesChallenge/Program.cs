@@ -1,5 +1,6 @@
-﻿namespace DatatypesChallenge;
+﻿using System;
 
+namespace DatatypesChallenge;
 class Program
 {
     static void Main(string[] args)

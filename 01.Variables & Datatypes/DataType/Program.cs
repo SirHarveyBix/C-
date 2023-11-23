@@ -1,5 +1,6 @@
-﻿namespace DataType;
+﻿using System;
 
+namespace DataType;
 class Program
 {
     static void Main(string[] args)

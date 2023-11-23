@@ -1,5 +1,4 @@
-﻿
-namespace DataTypesAndLimits
+﻿namespace DataTypesAndLimits
 {
     public class DataTypesAndLimits
     {
@@ -24,11 +23,6 @@ namespace DataTypesAndLimits
         // Unicode characters and strings
         char letter = 'A';
         string name = "John Doe";
-
-        public static void Main(string[] args)
-        {
-
-        }
     }
 }
 

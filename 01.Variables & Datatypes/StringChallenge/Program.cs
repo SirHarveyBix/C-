@@ -1,5 +1,6 @@
-﻿namespace StringChallenge;
+﻿using System;
 
+namespace StringChallenge;
 class Program
 {
     static void Main(string[] args)
