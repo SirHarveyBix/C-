@@ -1,7 +1,6 @@
 ﻿using System;
 
-namespace methods;
-
+namespace Methods;
 class Program
 {
     static void Main(string[] args)
