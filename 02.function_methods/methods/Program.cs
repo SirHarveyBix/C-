@@ -19,6 +19,19 @@ class Program
     public static void WriteSomething()
     {
         Console.WriteLine("Inside a method.\n");
+
+        string friend1 = "Franck";
+        string friend2 = "Michael";
+        string friend3 = "Wlad";
+
+        GreetFriend(friend1);
+        GreetFriend(friend2);
+        GreetFriend(friend3);
+    }
+
+    public static void GreetFriend(string friendName)
+    {
+        Console.WriteLine("Hi " + friendName + ", my friend !");
     }
 
     public static void WriteSomethidSpecific(string text)
@@ -36,7 +49,7 @@ class Program
         return number1 * number2;
     }
 
-    public static double Divide(int number1, int number2)
+    public static double Divide(double number1, double number2)
     {
         return number1 / number2;
     }
