@@ -84,11 +84,33 @@ class Program
         Console.WriteLine("Please enter a second number");
         string secondNumber = Console.ReadLine();
 
-        int number1 = int.Parse(firstNumber);
-        int number2 = int.Parse(secondNumber);
-
+        int number1 = 0;
+        int number2 = 0;
         int result = number1 + number2;
+        try
+        {
+            number1 = int.Parse(firstNumber);
+            number2 = int.Parse(secondNumber);
+            result = number1 + number2;
+        }
+        catch (FormatException)
+        {
+            //throw;
+            Console.WriteLine("format Exception, please enter the correct type!");
+        }
+        catch (OverflowException)
+        {
+            Console.WriteLine("Overflow Exception! the number is too long or too short for a int");
+        }
+        catch (ArgumentNullException)
+        {
+            Console.WriteLine("Argument Exception! the value is empty");
+        }
+        finally
+        {
+            Console.WriteLine("finally :  this is called anyways.");
+        }
+
         return result;
     }
-
 }
