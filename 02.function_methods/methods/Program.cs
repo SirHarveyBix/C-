@@ -24,9 +24,13 @@ class Program
         GreetFriend(friend2);
         GreetFriend(friend3);
 
-        string input = "lol";
-        Console.WriteLine(LowUpper(input));
-        Count(input);
+        string inputChallenge = "lol";
+        Console.WriteLine(LowUpper(inputChallenge));
+        Count(inputChallenge);
+
+        Console.WriteLine("\n # # # # # #\n");
+
+        Console.WriteLine("Result: " + Calculate());
     }
 
     // access modifier [static], return type [void], method name, parameter (type name).
@@ -71,4 +75,20 @@ class Program
     {
         Console.WriteLine("The amount of characters is {0}.", input.Length);
     }
+
+    public static int Calculate()
+    {
+        Console.WriteLine("Please enter a first number");
+        string firstNumber = Console.ReadLine();
+
+        Console.WriteLine("Please enter a second number");
+        string secondNumber = Console.ReadLine();
+
+        int number1 = int.Parse(firstNumber);
+        int number2 = int.Parse(secondNumber);
+
+        int result = number1 + number2;
+        return result;
+    }
+
 }
