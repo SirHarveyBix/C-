@@ -1,4 +1,6 @@
-﻿namespace methods;
+﻿using System;
+
+namespace methods;
 
 class Program
 {
@@ -13,12 +15,6 @@ class Program
 
         Console.WriteLine(Multiply(4, 2));
         Console.WriteLine(Divide(4, 2));
-    }
-
-    // access modifier [static], return type [void], method name, parameter (type name).
-    public static void WriteSomething()
-    {
-        Console.WriteLine("Inside a method.\n");
 
         string friend1 = "Franck";
         string friend2 = "Michael";
@@ -27,6 +23,16 @@ class Program
         GreetFriend(friend1);
         GreetFriend(friend2);
         GreetFriend(friend3);
+
+        string input = "lol";
+        Console.WriteLine(LowUpper(input));
+        Count(input);
+    }
+
+    // access modifier [static], return type [void], method name, parameter (type name).
+    public static void WriteSomething()
+    {
+        Console.WriteLine("Inside a method.\n");
     }
 
     public static void GreetFriend(string friendName)
@@ -52,5 +58,17 @@ class Program
     public static double Divide(double number1, double number2)
     {
         return number1 / number2;
+    }
+
+    /*"lol" string will produse "lolLOL".*/
+    public static string LowUpper(string input)
+    {
+        return input.ToLower() + input.ToUpper();
+    }
+
+    /*"lol" string will print "The amount of characters is 3.".*/
+    public static void Count(string input)
+    {
+        Console.WriteLine("The amount of characters is {0}.", input.Length);
     }
 }
