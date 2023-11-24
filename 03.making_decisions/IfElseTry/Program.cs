@@ -6,9 +6,22 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("what temperature is it outisde ?");
-
         string temperature = Console.ReadLine();
-        int temperatureInt = int.Parse(temperature);
+
+        int temperatureInt;
+        int number;
+
+        bool isNumberInput = int.TryParse(temperature, out number);
+
+        if (isNumberInput)
+        {
+            temperatureInt = number;
+        }
+        else
+        {
+            temperatureInt = 0;
+            Console.WriteLine("Entered value is not a number, 0 set as temperature");
+        }
 
         if (temperatureInt < 20)
         {
@@ -28,4 +41,3 @@ class Program
         }
     }
 }
-
