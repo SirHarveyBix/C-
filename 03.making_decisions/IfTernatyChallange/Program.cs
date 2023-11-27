@@ -13,7 +13,6 @@ class Program
         CheckHighscore(350, "Kevin aka KÉKÉ");
 
         Console.WriteLine("\n - - - - -\n");
-
         int temperature = 0;
         string stateOfMatter;
 
@@ -29,6 +28,7 @@ class Program
         Console.WriteLine("State of matter is {0}", stateOfMatter);
 
         temperature += 100;
+        // Nested Ternary - not sure it is a good practice:
         stateOfMatter = temperature > 100 ? "gas"
                         : temperature < 0 ? "solid" : "liquid";
 
