@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TernaryChallenge", "TernaryChallenge.csproj", "{D8E0E4D9-5F39-4FF7-B0B1-C2EDFA2E3CF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8E0E4D9-5F39-4FF7-B0B1-C2EDFA2E3CF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8E0E4D9-5F39-4FF7-B0B1-C2EDFA2E3CF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8E0E4D9-5F39-4FF7-B0B1-C2EDFA2E3CF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8E0E4D9-5F39-4FF7-B0B1-C2EDFA2E3CF9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD67472C-DEE4-4907-8917-EA8243D18927}
+	EndGlobalSection
+EndGlobal
