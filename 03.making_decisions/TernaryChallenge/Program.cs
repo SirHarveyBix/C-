@@ -1,5 +1,6 @@
-﻿namespace TernaryChallenge;
+﻿using System;
 
+namespace TernaryChallenge;
 class Program
 {
     static void Main(string[] args)
