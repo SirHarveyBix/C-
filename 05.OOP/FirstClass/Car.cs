@@ -4,20 +4,40 @@ namespace FirstClass
 {
     internal class Car
     {
-        public Car(string brand) // Constructor
-        {
-            Console.WriteLine(brand + " has been created.");
+        // Member variables : private field - stores data
+        private string _name; // '_' naming convention for private
+        private int _hp;
+        private string _color;
 
+        // Constructor
+        public Car(string name, int hp = 0 /*default value*/, string color = "black")
+        {
+            _name = name;
+            _hp = hp;
+            _color = color;
+
+            Console.WriteLine(name + " has been created.");
         }
 
+        // Member methods :
         public void Drive()
         {
-            Console.WriteLine("Car is Driving.");
+            Console.WriteLine(_name + " is Driving.");
         }
 
         public void Stop()
         {
-            Console.WriteLine("Car Stopped.");
+            Console.WriteLine(_name + " Stopped.");
+        }
+
+        public void Details()
+        {
+            Console.WriteLine(
+                "Car name is " + _name
+                + " is " + _color
+                + ", and has : " + _hp
+                + " horse power."
+            );
         }
     }
 }
