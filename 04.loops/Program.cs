@@ -11,13 +11,14 @@ class Program
 
         for (int counter = 0; counter < 50; counter += 5)
         {
-            Console.WriteLine(counter + "is lower than 50");
             if (counter == 40)
             {
-                Console.WriteLine("'continue;' : Skip the 3, cut it off!");
-                Console.WriteLine("  'break;' : would have stop th loop at 3");
+                Console.WriteLine("40 does not exist");
+                Console.WriteLine("   > 'continue;' : Skip number 40,");
+                Console.WriteLine("   > 'break;' : would have stop the loop at 40.");
                 continue;
             }
+            Console.WriteLine(counter + " is lower than 50");
         }
 
         // - - - - DO WHILE LOOP - - - -
