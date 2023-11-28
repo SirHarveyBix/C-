@@ -9,8 +9,26 @@ namespace FirstClass
         private int _hp;
         private string _color;
 
-        // Constructor
-        public Car(string name, int hp = 0 /*default value*/, string color = "black")
+        // Default Constructor
+        public Car()
+        {
+            _name = "Car";
+            _hp = 0;
+            _color = "yellow pee";
+        }
+
+        // Partial specification Constructor
+        public Car(string name, int hp = 0 /*default value*/)
+        {
+            _name = name;
+            _hp = hp;
+            _color = "random black";
+
+            Console.WriteLine(name + " has been created.");
+        }
+
+        // Full Specification Constructor
+        public Car(string name, int hp, string color)
         {
             _name = name;
             _hp = hp;
