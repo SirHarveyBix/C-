@@ -21,6 +21,28 @@ class Program
         int[] gradeStudentA = { 20, 13, 18, 19, 2 };
         int[] gradeStudentB = new int[] { 15, 6, 8, 19, 20 };
 
-        Console.WriteLine("gradeStudentB.Length" + gradeStudentB.Length);
+        Console.WriteLine("gradeStudentB.Length " + gradeStudentB.Length);
+
+        // looping through
+        for (int index = 0; index < gradeStudentB.Length; index++)
+        {
+            Console.WriteLine("before set : " + gradeStudentB[index]);
+            gradeStudentB[index] = index; // replace grades by index
+            Console.WriteLine("after set : {0}\n", gradeStudentB[index]);
+        }
+
+        int counter = 0;
+        foreach (int key in gradeStudentA)
+        {
+            counter++;
+            Console.WriteLine("iteration count : {1},\ngradeStudentA key: {0}\n", key, counter);
+        }
+
+        string[] randomList = { "tomatoe", "beer - IPA", "cheese", "new computer", "biscuits" };
+
+        foreach (string product in randomList)
+        {
+            Console.WriteLine("Buy: " + product);
+        }
     }
 }
