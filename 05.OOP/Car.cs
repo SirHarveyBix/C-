@@ -54,6 +54,8 @@ namespace FirstClass
             }
         }
 
+        public int MaxSpeed { get; set; }
+
         // setter
         public void SetName(string name)
         {

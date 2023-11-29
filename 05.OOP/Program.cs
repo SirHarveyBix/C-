@@ -23,6 +23,7 @@ class Program
         myCar.Details();
         myCar.SetName("Blablaa car");
         Console.WriteLine("this car name is : " + myCar.GetName());
+        myCar.MaxSpeed = 110; // 'auto implemented property'
 
         Console.WriteLine("\nif you want a car to stop write down'stop'.");
 
