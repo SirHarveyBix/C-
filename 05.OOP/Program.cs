@@ -8,6 +8,10 @@ class Program
         Car audi = new Car("Audi A4", 125);
         audi.Drive();
         audi.Details();
+        audi.Name = "Audi Q7 - using accessor"; // set name set acessor
+        Console.WriteLine("Audi name is " + audi.Name); // get name using get acessor
+
+        Console.WriteLine();
 
         Car bmw = new Car("BMW M5", 350, "mate pink");
         bmw.Drive();

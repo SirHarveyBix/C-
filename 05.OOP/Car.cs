@@ -43,12 +43,25 @@ namespace FirstClass
             _Resitration();
         }
 
+        // public propery - Accessor
+        public string Name
+        {
+            get { return _name; }
+            set
+            {
+                if (value == "") _name = " Accessor Default Name";
+                else _name = value;
+            }
+        }
+
+        // setter
         public void SetName(string name)
         {
-            if (name == "") _name = "Default";
+            if (name == "") _name = "Setter Default Name";
             else _name = name;
         }
 
+        // getter
         public string GetName()
         {
             return _name;
