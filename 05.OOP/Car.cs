@@ -44,6 +44,8 @@ namespace FirstClass
         }
 
         // public propery - Accessor
+        public int MaxSpeed { get; set; }
+
         public string Name
         {
             get { return _name; }
@@ -53,8 +55,6 @@ namespace FirstClass
                 else _name = value;
             }
         }
-
-        public int MaxSpeed { get; set; }
 
         // setter
         public void SetName(string name)
