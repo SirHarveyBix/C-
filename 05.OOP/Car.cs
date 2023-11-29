@@ -4,7 +4,9 @@ namespace FirstClass
 {
     internal class Car
     {
-        // Member variables : private field - stores data
+        // Member variables :
+        // access modifier private
+        // private field - stores data
         private string _name; // '_' naming convention for private
         private int _hp;
         private string _color;
@@ -15,6 +17,8 @@ namespace FirstClass
             _name = "Car";
             _hp = 0;
             _color = "yellow pee";
+
+            _Resitration();
         }
 
         // Partial specification Constructor
@@ -25,6 +29,7 @@ namespace FirstClass
             _color = "random black";
 
             Console.WriteLine(name + " has been created.");
+            _Resitration();
         }
 
         // Full Specification Constructor
@@ -35,6 +40,18 @@ namespace FirstClass
             _color = color;
 
             Console.WriteLine(name + " has been created.");
+            _Resitration();
+        }
+
+        public void SetName(string name)
+        {
+            if (name == "") _name = "Default";
+            else _name = name;
+        }
+
+        public string GetName()
+        {
+            return _name;
         }
 
         // Member methods :
@@ -56,6 +73,11 @@ namespace FirstClass
                 + ", and has : " + _hp
                 + " horse power."
             );
+        }
+
+        private void _Resitration()
+        {
+            Console.WriteLine(_name + " is registered !");
         }
     }
 }

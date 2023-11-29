@@ -13,8 +13,12 @@ class Program
         bmw.Drive();
         bmw.Details();
 
+        Console.WriteLine();
+
         Car myCar = new Car();
         myCar.Details();
+        myCar.SetName("Blablaa car");
+        Console.WriteLine("this car name is : " + myCar.GetName());
 
         Console.WriteLine("\nif you want a car to stop write down'stop'.");
 
