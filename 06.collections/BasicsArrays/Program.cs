@@ -21,9 +21,9 @@ class Program
         int[] gradeStudentA = { 20, 13, 18, 19, 2 };
         int[] gradeStudentB = new int[] { 15, 6, 8, 19, 20 };
 
-        Console.WriteLine("gradeStudentB.Length " + gradeStudentB.Length);
+        // -  -  -  looping through  -  -  - //
 
-        // looping through
+        /* -> for loop */
         for (int index = 0; index < gradeStudentB.Length; index++)
         {
             Console.WriteLine("before set : " + gradeStudentB[index]);
@@ -32,17 +32,30 @@ class Program
         }
 
         int counter = 0;
+        /* -> for each loop */
         foreach (int key in gradeStudentA)
         {
+            // here 'key' worth 'gradeStudentA[i]' in for loop
             counter++;
             Console.WriteLine("iteration count : {1},\ngradeStudentA key: {0}\n", key, counter);
         }
 
         string[] randomList = { "tomatoe", "beer - IPA", "cheese", "new computer", "biscuits" };
-
+        /* -> for each loop */
         foreach (string product in randomList)
         {
             Console.WriteLine("Buy: " + product);
         }
+
+        string anotherInput;
+        /* -> do while loop */
+        //(when you don't know how many time you need to loop
+        do
+        {
+            Console.WriteLine("\nplease enter a valid number");
+            anotherInput = Console.ReadLine();
+            Console.Read();
+        } while (!int.TryParse(anotherInput, out _)); // '_' : not interested by the converted number
+        // this loop stops if the user enter a valid number
     }
 }
