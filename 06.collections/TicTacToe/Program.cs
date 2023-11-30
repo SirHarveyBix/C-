@@ -9,14 +9,13 @@ class Program
          { '4','5','6' }, // row 1
          { '7','8','9' }  // row 2
     };
+    static int turns = 0;
 
     static void Main(string[] args)
     {
         int player = 2;
         int input = 0;
         bool inputCorrect = true;
-
-        SetField();
 
         do
         {
@@ -31,6 +30,45 @@ class Program
                 EnterXorO(player, input);
             }
 
+            SetField();
+
+            #region
+            /* Check winning conditions */
+            char[] playerChars = { 'X', 'O' };
+
+            foreach (char playerChar in playerChars)
+            {
+                if (((playField[0, 0] == playerChar) && (playField[0, 1] == playerChar) && (playField[0, 2] == playerChar))
+                     || ((playField[1, 0] == playerChar) && (playField[1, 1] == playerChar) && (playField[1, 2] == playerChar))
+                     || ((playField[2, 0] == playerChar) && (playField[2, 1] == playerChar) && (playField[2, 2] == playerChar))
+                     || ((playField[0, 0] == playerChar) && (playField[1, 0] == playerChar) && (playField[2, 0] == playerChar))
+                     || ((playField[0, 1] == playerChar) && (playField[1, 1] == playerChar) && (playField[2, 1] == playerChar))
+                     || ((playField[0, 2] == playerChar) && (playField[1, 2] == playerChar) && (playField[2, 2] == playerChar))
+                     || ((playField[0, 0] == playerChar) && (playField[1, 1] == playerChar) && (playField[2, 2] == playerChar))
+                     || ((playField[0, 2] == playerChar) && (playField[1, 1] == playerChar) && (playField[2, 0] == playerChar))
+                     )
+                {
+                    if (playerChar == 'X') { Console.WriteLine("\nPlayer 2 has won!"); }
+                    else { Console.WriteLine("\nPlayer 1 has won!"); }
+
+                    Console.WriteLine("Press any Key to Reset the Game");
+                    Console.ReadKey();
+                    ResetField();
+                    break;
+                }
+                else if (turns == 10)
+                {
+                    Console.WriteLine("/Draw");
+                    Console.WriteLine("Press any Key to Reset the Game");
+                    Console.ReadKey();
+                    ResetField();
+                    break;
+                }
+            }
+            #endregion
+
+            #region
+            /* Check if input is valid, and has already been taken */
             do
             {
                 Console.WriteLine("\nPlayer {0}: choose your field!", player);
@@ -40,7 +78,22 @@ class Program
                 }
                 catch { Console.WriteLine("Plese enter a number!"); }
 
+                if ((input == 1) && (playField[0, 0] == '1')) { inputCorrect = true; }
+                else if ((input == 2) && (playField[0, 1] == '2')) { inputCorrect = true; }
+                else if ((input == 3) && (playField[0, 2] == '3')) { inputCorrect = true; }
+                else if ((input == 4) && (playField[1, 0] == '4')) { inputCorrect = true; }
+                else if ((input == 5) && (playField[1, 1] == '5')) { inputCorrect = true; }
+                else if ((input == 6) && (playField[1, 2] == '6')) { inputCorrect = true; }
+                else if ((input == 7) && (playField[2, 0] == '7')) { inputCorrect = true; }
+                else if ((input == 8) && (playField[2, 1] == '8')) { inputCorrect = true; }
+                else if ((input == 9) && (playField[2, 2] == '9')) { inputCorrect = true; }
+                else
+                {
+                    Console.WriteLine("\n Incorrect input! Please use another field!");
+                    inputCorrect = false;
+                }
             } while (!inputCorrect);
+            #endregion
 
         } while (true);
 
@@ -59,7 +112,7 @@ class Program
         Console.WriteLine("     |     |     ");
         Console.WriteLine("  {0}  |  {1}  |  {2}", playField[2, 0], playField[2, 1], playField[2, 2]);
         Console.WriteLine("     |     |     ");
-        //turns++;
+        turns++;
 
     }
 
@@ -82,5 +135,19 @@ class Program
             case 8: playField[2, 1] = playerSign; break;
             case 9: playField[2, 2] = playerSign; break;
         }
+    }
+
+    public static void ResetField()
+    {
+        char[,] playFieldInitial =
+        {
+            {'1','2','3'},
+            {'4','5','6'},
+            {'7','8','9'}
+        };
+
+        playField = playFieldInitial;
+        SetField();
+        turns = 0;
     }
 }
