@@ -96,12 +96,10 @@ class Program
             #endregion
 
         } while (true);
-
     }
 
     public static void SetField()
     {
-
         Console.Clear();
         Console.WriteLine("     |     |      ");
         Console.WriteLine("  {0}  |  {1}  |  {2}", playField[0, 0], playField[0, 1], playField[0, 2]);
@@ -113,7 +111,6 @@ class Program
         Console.WriteLine("  {0}  |  {1}  |  {2}", playField[2, 0], playField[2, 1], playField[2, 2]);
         Console.WriteLine("     |     |     ");
         turns++;
-
     }
 
     public static void EnterXorO(int player, int input)
