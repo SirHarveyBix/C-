@@ -5,32 +5,32 @@ class Program
 {
     static void Main(string[] args)
     {
+        string hash = "\n# # # # # #\n";
         int[] sutendsGrades = new int[] { 15, 13, 8, 12, 6, 16 };
         double averageResult = GetAverage(sutendsGrades);
 
         foreach (int grade in sutendsGrades) { Console.Write("{0}, ", grade); }
-        Console.WriteLine("\nAverage is : {0}", averageResult);
+        Console.WriteLine("\nAverage is : {0}\n", averageResult);
 
         int[] happiness = { 2, 3, 4, 5, 6 };
         SunIsShining(happiness);
         foreach (int y in happiness) { Console.WriteLine(y); }
 
-        Console.WriteLine("\n# # # # # #\n");
+        Console.WriteLine(hash);
         ParamsMethod("this", "is", "a", "long", "string", "blah", "bla", "and", "END!");
-        Console.WriteLine("\n# # # # # #\n");
+        Console.WriteLine(hash);
 
         int price = 50;
         float pi = 3.14f;
-        char at = '@';
         string book = "Lord of the ring.";
 
         // 'params' keyword, with 'object[]' type,
         // allow to pass as many params, and any type we want.
-        ParamsMethodStuff(price, pi, at, book);
+        ParamsMethodStuff(price, pi, '@', book);
         ParamsMethodStuff("Hello", 5.3, '£');
-        Console.WriteLine("\n# # # # # #\n");
+        Console.WriteLine(hash);
 
-        Console.WriteLine("Sum: " + Sum(1, 2, 87, 1, 666, 12, 54) + "\n# # # # # #\n");
+        Console.WriteLine("Sum: " + Sum(1, 2, 87, 1, 666, 12, 54) + hash);
         Console.WriteLine("Average: " + Average(1, 2, 87, 1, 666, 12, 54));
     }
 
@@ -63,7 +63,7 @@ class Program
     public static void ParamsMethodStuff(params object[] stuff)
     {
         foreach (object thing in stuff) { Console.Write(thing + " "); }
-        Console.WriteLine("\n# # # #\n");
+        Console.WriteLine("\n# # # # # #\n");
     }
 
     static double GetAverage(int[] gradesArray)
