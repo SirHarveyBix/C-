@@ -18,11 +18,11 @@ class Program
         SunIsShining(happiness);
         foreach (int y in happiness) { Console.WriteLine(y); }
 
-        Console.WriteLine("\n # # # # # # \n");
+        Console.WriteLine("\n# # # # # #\n");
 
         ParamsMethod("this", "is", "a", "long", "string", "blah", "bla", "and", "END!");
 
-        Console.WriteLine("\n # # # # # # \n");
+        Console.WriteLine("\n# # # # # #\n");
 
         int price = 50;
         float pi = 3.14f;
@@ -34,6 +34,31 @@ class Program
 
         ParamsMethodStuff(price, pi, at, book);
         ParamsMethodStuff("Hello", 5.3, '£');
+        Console.WriteLine("\n# # # # # #\n");
+
+        Console.WriteLine("Sum: " + Sum(1, 2, 87, 1, 666, 12, 54));
+        Console.WriteLine("\n# # # # # #\n");
+        Console.WriteLine("Average: " + Average(1,[1, 2, 87, 1, 666, 12, 54]));
+    }
+
+    public static int Sum(params int[] numbers)
+    {
+        int total = 0;
+
+        foreach (int number in numbers) { total += number; }
+        return total;
+    }
+
+    public static double Average(int num, params int[] numbers) // using params impact performance
+    {
+        int total = 0;
+        int count = 0;
+        foreach (int number in numbers)
+        {
+            total += number;
+            count++;
+        }
+        return (double)total / count;
     }
 
     public static void ParamsMethod(params string[] sentence) // 'params': as many params as we want
@@ -44,7 +69,7 @@ class Program
     public static void ParamsMethodStuff(params object[] stuff)
     {
         foreach (object thing in stuff) { Console.Write(thing + " "); }
-        Console.WriteLine("\n# # # #\n");
+        Console.WriteLine("\n# # # #\n");
     }
 
 
