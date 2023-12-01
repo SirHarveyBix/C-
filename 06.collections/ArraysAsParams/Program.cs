@@ -3,9 +3,9 @@
 namespace ArraysAsParams;
 class Program
 {
+    static string hash = "\n# # # # # #\n";
     static void Main(string[] args)
     {
-        string hash = "\n# # # # # #\n";
         int[] sutendsGrades = new int[] { 15, 13, 8, 12, 6, 16 };
         double averageResult = GetAverage(sutendsGrades);
 
@@ -31,6 +31,20 @@ class Program
         Console.WriteLine(hash);
 
         Console.WriteLine("Average: " + Average(1, 2, 87, 1, 666, 12, 54));
+
+        /* - - Real world 'params' example - - */
+        int min = MinV2(5, 1, 0, -11, 40);
+        Console.WriteLine("{1}Minimum is: {0}", min, hash);
+    }
+
+    public static int MinV2(params int[] numbers)
+    {
+        int min = int.MaxValue;
+        foreach (var number in numbers)
+        {
+            if (number < min) { min = number; }
+        }
+        return min;
     }
 
     public static double Average(/*int num,*/ params int[] numbers) // using params impact performance
@@ -54,7 +68,7 @@ class Program
     public static void ParamsMethodStuff(params object[] stuff)
     {
         foreach (object thing in stuff) { Console.Write(thing + " "); }
-        Console.WriteLine("\n# # # # # #\n");
+        Console.WriteLine(hash);
     }
 
     static double GetAverage(int[] gradesArray)
