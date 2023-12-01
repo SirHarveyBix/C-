@@ -30,5 +30,9 @@ class Program
             else if (item is string || item is char) Console.Write(item + ", ");
         }
         Console.WriteLine("\nsum : {0}\n", sum);
+
+        // Declaring a List - type casting is mandatory: <string>
+        List<string> firstList = new List<string>();
+        List<int> secondtList = new List<int>(5) { 1, 2, 3, 4, 5 }; // <type>, (amount) of values, {value}
     }
 }
