@@ -30,19 +30,10 @@ class Program
         ParamsMethodStuff("Hello", 5.3, '£');
         Console.WriteLine(hash);
 
-        Console.WriteLine("Sum: " + Sum(1, 2, 87, 1, 666, 12, 54) + hash);
         Console.WriteLine("Average: " + Average(1, 2, 87, 1, 666, 12, 54));
     }
 
-    public static int Sum(params int[] numbers)
-    {
-        int total = 0;
-
-        foreach (int number in numbers) { total += number; }
-        return total;
-    }
-
-    public static double Average(int num, params int[] numbers) // using params impact performance
+    public static double Average(/*int num,*/ params int[] numbers) // using params impact performance
     {
         int total = 0;
         int count = 0;
@@ -78,5 +69,5 @@ class Program
         return (double)sum / size;
     }
 
-    static void SunIsShining(int[] x) { for (int i = 0; i < x.Length; i++) { x[i] += 2; } }
+    static void SunIsShining(int[] happiness) { for (int i = 0; i < happiness.Length; i++) { happiness[i] += 2; } }
 }
