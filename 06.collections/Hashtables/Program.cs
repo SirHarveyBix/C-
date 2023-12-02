@@ -42,5 +42,19 @@ class Program
             Console.WriteLine("Student Name: '{0}'", student.Name);
             Console.WriteLine("Student GPA: '{0}'\n", student.GPA);
         }
+
+        Console.WriteLine("\n - # # CHALLENGE # # - \n");
+
+        /*  --  --  Challenge  -- -- */
+
+        
+        Student[] students = new Student[5];
+
+        students[0] = new Student(1, "Denis", 98);
+        students[1] = new Student(2, "Olaf", 97);
+        students[2] = new Student(3, "Ragnar", 65);
+        students[3] = new Student(4, "Luisz", 75);
+        students[4] = new Student(4, "Levi", 58);
+
     }
 }
