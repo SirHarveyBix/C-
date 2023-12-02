@@ -46,15 +46,30 @@ class Program
         Console.WriteLine("\n - # # CHALLENGE # # - \n");
 
         /*  --  --  Challenge  -- -- */
+        // create hashtable :
+        Hashtable table = new Hashtable();
 
-        
         Student[] students = new Student[5];
 
         students[0] = new Student(1, "Denis", 98);
         students[1] = new Student(2, "Olaf", 97);
         students[2] = new Student(3, "Ragnar", 65);
+        students[0] = new Student(2, "Annaïs", 08);
         students[3] = new Student(4, "Luisz", 75);
-        students[4] = new Student(4, "Levi", 58);
+        students[4] = new Student(5, "Levi", 58);
 
+        //loop throught students Array, to add it to the hashtable
+        foreach (Student student in students)
+        {
+            if (!table.ContainsKey(student.Id))
+            {
+                table.Add(student.Id, student);
+                Console.WriteLine("Student with ID: {0}, has been added!", student.Id);
+            }
+            else
+            {
+                Console.WriteLine("Sorry, students name '{0}', with ID: {1}, already exitsts.", student.Name, student.Id);
+            }
+        }
     }
 }
